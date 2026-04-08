@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Script from "next/script";
 import { Flex } from "@/styles/components";
 
 const Home: NextPage = () => {
@@ -7,42 +8,56 @@ const Home: NextPage = () => {
     <>
       <Head>
         <title>Brandon Spencer</title>
-        <meta name="description" content="Personal homepage of Brandon Spencer" />
+        <meta name="description" content="Brandon Spencer | Software Engineer" />
       </Head>
+      <Script>
+        <script src="https://kit.fontawesome.com/800ba3c0e3.js" crossorigin="anonymous"></script>
+
+      </Script>
 
       <main className="mx-auto max-w-2xl px-6 py-16 font-sans text-zinc-900">
-
+        <section>
+          <div className="w-full h-screen flex justify-center items-center -mt-8 relative">
+            Hi Im Brandon
+          </div>
+        </section>
         {/* Hero */}
         <section className="mb-16 justify-center">
+          <Flex className="flex-col gap-3 items-center">
+              <h1 className="text-3xl font-semibold tracking-tight mb-2">Brandon Spencer</h1>
+              <Flex className="text-lg text-zinc-500">Software Engineer</Flex>
+              <p className="text-zinc-600 leading-relaxed mb-5">
+                Needs a good tag line
+              </p>
+              <ul className="flex flex-wrap gap-4 text-sm text-zinc-500">
+                <li>
+                  <i className="fa-solid fa-envelope"></i>
+                  <a href="mailto:brandon.spencer@gmail.com" className="hover:text-zinc-900 transition-colors">
+                    brandon.spencer@gmail.com
+                  </a>
+                </li>
+                <li>
+                  <i className="fa-solid fa-phone"></i>
+                  <a href="tel:+18597976417" className="hover:text-zinc-900 transition-colors">
+                    859.797.6417
+                  </a>
+                </li>
+                <li>
+                  <i className="fa-brands fa-github"></i>
+                  <a href="https://github.com/doubldragon" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-900 transition-colors">
+                    GitHub
+                  </a>
+                </li>
+                <li>
+                  <i className="fa-brands fa-linkedin"></i>
+                  <a href="https://linkedin.com/in/brandonrspencer" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-900 transition-colors">
+                    LinkedIn
+                  </a>
+                </li>
+              </ul>
 
+          </Flex>
 
-          <h1 className="text-3xl font-semibold tracking-tight mb-2">Brandon Spencer</h1>
-          <Flex className="text-lg text-zinc-500 mb-6">Software Engineer</Flex>
-          <p className="text-zinc-600 leading-relaxed mb-5">
-            Needs a good tag line
-          </p>
-          <ul className="flex flex-wrap gap-4 text-sm text-zinc-500">
-            <li>
-              <a href="mailto:brandon.spencer@gmail.com" className="hover:text-zinc-900 transition-colors">
-                brandon.spencer@gmail.com
-              </a>
-            </li>
-            <li>
-              <a href="tel:+18597976417" className="hover:text-zinc-900 transition-colors">
-                859.797.6417
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/doubldragon" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-900 transition-colors">
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://linkedin.com/in/brandonrspencer" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-900 transition-colors">
-                LinkedIn
-              </a>
-            </li>
-          </ul>
         </section>
 
         {/* Projects */}
