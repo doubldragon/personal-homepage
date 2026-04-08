@@ -9,65 +9,122 @@ const Home: NextPage = () => {
     <>
       <Head>
         <title>Brandon Spencer</title>
-        <meta name="description" content="Brandon Spencer | Software Engineer" />
+        <meta
+          name="description"
+          content="Brandon Spencer | Software Engineer"
+        />
       </Head>
-      <Script src="https://kit.fontawesome.com/800ba3c0e3.js" strategy="lazyOnload" />
+      <Script
+        src="https://kit.fontawesome.com/800ba3c0e3.js"
+        strategy="lazyOnload"
+      />
 
       <Navbar />
       <main className="mx-auto max-w-2xl px-6 py-16 font-sans text-theme-text">
         <section id="hero">
           <div className="w-full h-screen flex justify-center items-center -mt-8 relative">
-            <div className="hero-layout"><div className="hero-title-section"><h1 className="hero-title">Hey, I'm AJ</h1></div><div className="hero-content"><p className="hero-subtitle mb-8">I'm a <strong className="font-semibold text-accent2 dark:text-accent2-dark"> senior frontend engineer</strong> based in<i className="whitespace-nowrap font-light text-accent1 dark:text-accent1-dark"> Lexington, KY</i> and I specialize in building (and sometimes designing) experiences for the web.</p><div className="hero-actions"><a href="#portfolio" className="hero-button"><span>Explore My Projects</span><i className="fas fa-arrow-down ml-2" aria-hidden="true"></i></a></div></div></div>
+            <div className="hero-layout">
+              <div className="hero-title-section">
+                <h1 className="hero-title">Hey, I'm AJ</h1>
+              </div>
+              <div className="hero-content">
+                <p className="hero-subtitle mb-8">
+                  I'm a{" "}
+                  <strong className="font-semibold text-accent2 dark:text-accent2-dark">
+                    {" "}
+                    senior frontend engineer
+                  </strong>{" "}
+                  based in
+                  <i className="whitespace-nowrap font-light text-accent1 dark:text-accent1-dark">
+                    {" "}
+                    Lexington, KY
+                  </i>{" "}
+                  and I specialize in building (and sometimes designing)
+                  experiences for the web.
+                </p>
+                <div className="hero-actions">
+                  <a href="#portfolio" className="hero-button">
+                    <span>Explore My Projects</span>
+                    <i
+                      className="fas fa-arrow-down ml-2"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
         {/* About */}
         <section id="about" className="mb-16 justify-center">
           <Flex className="flex-col gap-3 items-center">
-              <h1 className="text-3xl font-semibold tracking-tight mb-2">Brandon Spencer</h1>
-              <Flex className="text-lg text-zinc-500">Software Engineer</Flex>
-              <p className="text-zinc-600 leading-relaxed mb-5">
-                Needs a good tag line
-              </p>
-              <ul className="flex flex-wrap gap-4 text-sm text-zinc-500">
-                <li>
-                  <i className="fa-solid fa-envelope"></i>
-                  <a href="mailto:brandon.spencer@gmail.com" className="hover:text-zinc-900 transition-colors">
-                    brandon.spencer@gmail.com
-                  </a>
-                </li>
-                <li>
-                  <i className="fa-solid fa-phone"></i>
-                  <a href="tel:+18597976417" className="hover:text-zinc-900 transition-colors">
-                    859.797.6417
-                  </a>
-                </li>
-                <li>
-                  <i className="fa-brands fa-github"></i>
-                  <a href="https://github.com/doubldragon" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-900 transition-colors">
-                    GitHub
-                  </a>
-                </li>
-                <li>
-                  <i className="fa-brands fa-linkedin"></i>
-                  <a href="https://linkedin.com/in/brandonrspencer" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-900 transition-colors">
-                    LinkedIn
-                  </a>
-                </li>
-              </ul>
-
+            <h1 className="text-3xl font-semibold tracking-tight mb-2">
+              Brandon Spencer
+            </h1>
+            <Flex className="text-lg text-zinc-500">Software Engineer</Flex>
+            <p className="text-zinc-600 leading-relaxed mb-5">
+              Needs a good tag line
+            </p>
+            <ul className="flex flex-wrap gap-4 text-sm text-zinc-500">
+              <li>
+                <i className="fa-solid fa-envelope"></i>
+                <a
+                  href="mailto:brandon.spencer@gmail.com"
+                  className="hover:text-zinc-900 transition-colors"
+                >
+                  brandon.spencer@gmail.com
+                </a>
+              </li>
+              <li>
+                <i className="fa-solid fa-phone"></i>
+                <a
+                  href="tel:+18597976417"
+                  className="hover:text-zinc-900 transition-colors"
+                >
+                  859.797.6417
+                </a>
+              </li>
+              <li>
+                <i className="fa-brands fa-github"></i>
+                <a
+                  href="https://github.com/doubldragon"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-zinc-900 transition-colors"
+                >
+                  GitHub
+                </a>
+              </li>
+              <li>
+                <i className="fa-brands fa-linkedin"></i>
+                <a
+                  href="https://linkedin.com/in/brandonrspencer"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-zinc-900 transition-colors"
+                >
+                  LinkedIn
+                </a>
+              </li>
+            </ul>
           </Flex>
-
         </section>
 
         {/* Projects */}
         <section id="projects" className="mb-16">
-          <h2 className="text-sm font-semibold uppercase tracking-widest text-zinc-400 mb-6">Projects</h2>
-          <p className="text-zinc-400 text-sm italic">Project components will be imported here.</p>
+          <h2 className="text-sm font-semibold uppercase tracking-widest text-zinc-400 mb-6">
+            Projects
+          </h2>
+          <p className="text-zinc-400 text-sm italic">
+            Project components will be imported here.
+          </p>
         </section>
 
         {/* Work Experience */}
         <section id="experience" className="mb-16">
-          <h2 className="text-sm font-semibold uppercase tracking-widest text-zinc-400 mb-6">Experience</h2>
+          <h2 className="text-sm font-semibold uppercase tracking-widest text-zinc-400 mb-6">
+            Experience
+          </h2>
           <div className="space-y-8">
             <div>
               <div className="flex items-baseline justify-between mb-1">
@@ -81,7 +138,6 @@ const Home: NextPage = () => {
             </div>
           </div>
         </section>
-
       </main>
     </>
   );
