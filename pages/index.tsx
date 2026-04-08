@@ -25,23 +25,22 @@ const Home: NextPage = () => {
           <div className="w-full h-screen flex justify-center items-center -mt-8 relative">
             <div className="hero-layout">
               <div className="hero-title-section">
-                <h1 className="hero-title">Hey, I'm AJ</h1>
+                <h1 className="hero-title">Hi, I'm Brandon</h1>
               </div>
               <div className="hero-content">
-                <p className="hero-subtitle mb-8">
+                <div className="hero-subtitle mb-8 text-right">
                   I'm a{" "}
                   <strong className="font-semibold text-accent2 dark:text-accent2-dark">
                     {" "}
-                    senior frontend engineer
+                    full stack developer
                   </strong>{" "}
-                  based in
+                  located in
                   <i className="whitespace-nowrap font-light text-accent1 dark:text-accent1-dark">
                     {" "}
                     Lexington, KY
                   </i>{" "}
-                  and I specialize in building (and sometimes designing)
-                  experiences for the web.
-                </p>
+                  with a primary focus on frontend experiences with a growing skillset in backend engineering.
+                </div>
                 <div className="hero-actions">
                   <a href="#portfolio" className="hero-button">
                     <span>Explore My Projects</span>
