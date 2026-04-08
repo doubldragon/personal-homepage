@@ -26,8 +26,8 @@
 /* Dark mode — applied when <html data-theme="dark"> is set */
 [data-theme="dark"] {
   /* Surfaces */
-  --color-bg:      #0f0f11;
-  --color-surface: #1c1c1e;
+  --color-bg:      #030389;
+  --color-surface: #04048e;
   --color-border:  #2d2d30;
 
   /* Text */

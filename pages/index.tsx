@@ -11,16 +11,13 @@ const Home: NextPage = () => {
         <title>Brandon Spencer</title>
         <meta name="description" content="Brandon Spencer | Software Engineer" />
       </Head>
-      <Script>
-        <script src="https://kit.fontawesome.com/800ba3c0e3.js" crossorigin="anonymous"></script>
-
-      </Script>
+      <Script src="https://kit.fontawesome.com/800ba3c0e3.js" strategy="lazyOnload" />
 
       <Navbar />
       <main className="mx-auto max-w-2xl px-6 py-16 font-sans text-theme-text">
         <section id="hero">
           <div className="w-full h-screen flex justify-center items-center -mt-8 relative">
-            Hi Im Brandon
+            <div className="hero-layout"><div className="hero-title-section"><h1 className="hero-title">Hey, I'm AJ</h1></div><div className="hero-content"><p className="hero-subtitle mb-8">I'm a <strong className="font-semibold text-accent2 dark:text-accent2-dark"> senior frontend engineer</strong> based in<i className="whitespace-nowrap font-light text-accent1 dark:text-accent1-dark"> Lexington, KY</i> and I specialize in building (and sometimes designing) experiences for the web.</p><div className="hero-actions"><a href="#portfolio" className="hero-button"><span>Explore My Projects</span><i className="fas fa-arrow-down ml-2" aria-hidden="true"></i></a></div></div></div>
           </div>
         </section>
         {/* About */}

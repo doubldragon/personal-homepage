@@ -14,7 +14,7 @@ const Navbar = () => {
   useEffect(() => {
     const stored = localStorage.getItem("theme");
     const isDark = stored === "dark";
-    setDark(isDark);
+    setDark(isDark); // eslint-disable-line react-hooks/set-state-in-effect
     document.documentElement.dataset.theme = isDark ? "dark" : "";
   }, []);
 
