@@ -9,9 +9,8 @@
 /* Light mode (default) */
 :root {
   /* Surfaces */
-  --color-bg: #f4faff;
-
-  --color-surface: #ffffff;
+  --color-surface: #f4faff;
+  --color-bg: #ffffff;
   --color-border: #e5e7eb;
 
   /* Text */
@@ -70,11 +69,15 @@ body {
   margin-bottom: calc(var(--spacing) * 5);
 }
 
+.hero-wrapper {
+  background-color: var(--color-surface);
+}
+
 .hero-layout {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 8px;
+  gap: 8px;  
 }
 
 .hero-title-section {

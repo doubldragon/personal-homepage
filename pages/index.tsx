@@ -25,9 +25,9 @@ const Home: NextPage = () => {
 
       <Navbar />
       <main className="w-full flex justify-center items-center flex-col text-theme-text">
-        <section id="hero">
-          <div className="w-full max-w-[90vw] h-screen flex justify-center items-center -mt-8 relative">
-            <div className="hero-layout">
+        <section id="hero" className="w-full">
+          <div className="hero-wrapper flex justify-center">
+            <div className="hero-layout w-full max-w-[90vw] h-screen flex justify-center items-center -mt-8 relative">
               <div className="hero-title-section">
                 <h1 className="hero-title">Hi, I'm Brandon</h1>
               </div>
