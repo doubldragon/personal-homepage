@@ -25,24 +25,25 @@ const ProjectCard = ({ project }: { project: Project }) => (
         <span className="text-xs text-theme-subtle">{project.year}</span>
       </div>
 
-      <p className="text-xs text-theme-muted">{project.category}</p>
+      <p className="text-xs text-theme-muted">{project.category.toUpperCase()}</p>
 
       <p className="text-sm text-theme-muted">{project.blurb}</p>
-
+      <hr />
       <div className="flex flex-wrap gap-2">
         {project.skills.map((s) => (
-          <Pill key={s}>{s}</Pill>
+          <Pill key={s}>{s.toUpperCase()}</Pill>
         ))}
       </div>
-
-      <a
-        href={project.link}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-sm text-theme-accent hover:text-theme-accent-hover transition-colors"
-      >
-        View project →
-      </a>
+      { project.link &&
+        <a
+          href={project.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sm text-theme-accent hover:text-theme-accent-hover transition-colors"
+        >
+          View project →
+        </a>
+      }
     </div>
   </div>
 );
