@@ -50,17 +50,18 @@ A minimal, clean personal site serving as a portfolio and professional presence.
 - [x] Dark/light mode toggle button in the navbar — persists preference via `localStorage` and applies `data-theme="dark"` on `<html>`
 - [x] Mount navbar in `index.tsx` layout
 
-### Phase 5 — Resume page (`resume.tsx`)
+### Phase 5 — Projects section
+
+- [x] Create `data/projects.ts` with `Project` type (filename, title, blurb, category, skills, year, link)
+- [x] Create `components/ProjectCard.tsx` — image at top (omitted if no filename), title, category, blurb, skill pills, year, external link
+- [x] Render cards in `index.tsx` in a responsive grid (up to 3 columns)
+- [x] Images served from `public/projects/`
+
+### Phase 6 — Resume page (`resume.tsx`)
 
 - [ ] Work experience
 - [ ] Education
 - [ ] Skills
-
-### Phase 6 — Projects
-
-- [ ] Define project component structure
-- [ ] Add first project page
-- [ ] Iterate for additional projects
 
 ### Phase 7 — Polish
 

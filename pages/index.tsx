@@ -3,6 +3,10 @@ import Head from "next/head";
 import Script from "next/script";
 import { Flex } from "@/styles/components";
 import Navbar from "@/components/Navbar";
+import ExperienceCard from "@/components/ExperienceCard";
+import experience from "@/data/experience";
+import ProjectCard from "@/components/ProjectCard";
+import projects from "@/data/projects";
 
 const Home: NextPage = () => {
   return (
@@ -20,29 +24,32 @@ const Home: NextPage = () => {
       />
 
       <Navbar />
-      <main className="mx-auto max-w-2xl px-6 py-16 font-sans text-theme-text">
+      <main className="w-full flex justify-center items-center flex-col text-theme-text">
         <section id="hero">
-          <div className="w-full h-screen flex justify-center items-center -mt-8 relative">
+          <div className="w-full max-w-[90vw] h-screen flex justify-center items-center -mt-8 relative">
             <div className="hero-layout">
               <div className="hero-title-section">
                 <h1 className="hero-title">Hi, I'm Brandon</h1>
               </div>
               <div className="hero-content">
                 <div className="hero-subtitle mb-8 text-right">
-                  I'm a{" "}
+                  A{" "}
                   <strong className="font-semibold text-accent2 dark:text-accent2-dark">
                     {" "}
-                    full stack developer
+                    <span style={{ color: "#ff9d00" }}>
+                      full stack developer
+                    </span>
                   </strong>{" "}
                   located in
                   <i className="whitespace-nowrap font-light text-accent1 dark:text-accent1-dark">
                     {" "}
                     Lexington, KY
                   </i>{" "}
-                  with a primary focus on frontend experiences with a growing skillset in backend engineering.
+                  with a primary focus on frontend experiences with a growing
+                  skillset in backend engineering.
                 </div>
                 <div className="hero-actions">
-                  <a href="#portfolio" className="hero-button">
+                  <a href="#projects" className="hero-button">
                     <span>Explore My Projects</span>
                     <i
                       className="fas fa-arrow-down ml-2"
@@ -110,31 +117,29 @@ const Home: NextPage = () => {
         </section>
 
         {/* Projects */}
-        <section id="projects" className="mb-16">
-          <h2 className="text-sm font-semibold uppercase tracking-widest text-zinc-400 mb-6">
+        <section id="projects" className="w-full max-w-[90vw] mb-16">
+          <h2 className="text-sm font-semibold uppercase tracking-widest text-theme-subtle mb-6">
             Projects
           </h2>
-          <p className="text-zinc-400 text-sm italic">
-            Project components will be imported here.
-          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {projects.map((project) => (
+              <ProjectCard key={project.title} project={project} />
+            ))}
+          </div>
         </section>
 
         {/* Work Experience */}
-        <section id="experience" className="mb-16">
-          <h2 className="text-sm font-semibold uppercase tracking-widest text-zinc-400 mb-6">
-            Experience
+        <section id="experience" className="w-full max-w-[90vw] mb-16">
+          <h2 className="text-sm font-semibold uppercase tracking-widest text-theme-subtle mb-6">
+            Work Experience
           </h2>
-          <div className="space-y-8">
-            <div>
-              <div className="flex items-baseline justify-between mb-1">
-                <h3 className="font-medium">Job Title</h3>
-                <span className="text-sm text-zinc-400">2023 — Present</span>
-              </div>
-              <p className="text-sm text-zinc-500 mb-2">Company Name</p>
-              <p className="text-sm text-zinc-600 leading-relaxed">
-                Brief description of your role and impact.
-              </p>
-            </div>
+          <div className="space-y-10">
+            {experience.map((entry) => (
+              <ExperienceCard
+                key={`${entry.company}-${entry.start}`}
+                entry={entry}
+              />
+            ))}
           </div>
         </section>
       </main>
