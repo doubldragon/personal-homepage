@@ -1,73 +1,147 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Script from "next/script";
 import { Flex } from "@/styles/components";
+import Navbar from "@/components/Navbar";
+import ExperienceCard from "@/components/ExperienceCard";
+import experience from "@/data/experience";
+import ProjectCard from "@/components/ProjectCard";
+import projects from "@/data/projects";
 
 const Home: NextPage = () => {
   return (
     <>
       <Head>
         <title>Brandon Spencer</title>
-        <meta name="description" content="Personal homepage of Brandon Spencer" />
+        <meta
+          name="description"
+          content="Brandon Spencer | Software Engineer"
+        />
       </Head>
+      <Script
+        src="https://kit.fontawesome.com/800ba3c0e3.js"
+        strategy="lazyOnload"
+      />
 
-      <main className="mx-auto max-w-2xl px-6 py-16 font-sans text-zinc-900">
-
-        {/* Hero */}
-        <section className="mb-16 justify-center">
-
-
-          <h1 className="text-3xl font-semibold tracking-tight mb-2">Brandon Spencer</h1>
-          <Flex className="text-lg text-zinc-500 mb-6">Software Engineer</Flex>
-          <p className="text-zinc-600 leading-relaxed mb-5">
-            Needs a good tag line
-          </p>
-          <ul className="flex flex-wrap gap-4 text-sm text-zinc-500">
-            <li>
-              <a href="mailto:brandon.spencer@gmail.com" className="hover:text-zinc-900 transition-colors">
-                brandon.spencer@gmail.com
-              </a>
-            </li>
-            <li>
-              <a href="tel:+18597976417" className="hover:text-zinc-900 transition-colors">
-                859.797.6417
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/doubldragon" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-900 transition-colors">
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://linkedin.com/in/brandonrspencer" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-900 transition-colors">
-                LinkedIn
-              </a>
-            </li>
-          </ul>
-        </section>
-
-        {/* Projects */}
-        <section className="mb-16">
-          <h2 className="text-sm font-semibold uppercase tracking-widest text-zinc-400 mb-6">Projects</h2>
-          <p className="text-zinc-400 text-sm italic">Project components will be imported here.</p>
-        </section>
-
-        {/* Work Experience */}
-        <section className="mb-16">
-          <h2 className="text-sm font-semibold uppercase tracking-widest text-zinc-400 mb-6">Experience</h2>
-          <div className="space-y-8">
-            <div>
-              <div className="flex items-baseline justify-between mb-1">
-                <h3 className="font-medium">Job Title</h3>
-                <span className="text-sm text-zinc-400">2023 — Present</span>
+      <Navbar />
+      <main className="w-full flex justify-center items-center flex-col text-theme-text">
+        <section id="hero" className="w-full">
+          <div className="hero-wrapper flex justify-center">
+            <div className="hero-layout w-full max-w-[90vw] h-screen flex justify-center items-center -mt-8 relative">
+              <div className="hero-title-section">
+                <h1 className="hero-title">Hi, I'm Brandon</h1>
               </div>
-              <p className="text-sm text-zinc-500 mb-2">Company Name</p>
-              <p className="text-sm text-zinc-600 leading-relaxed">
-                Brief description of your role and impact.
-              </p>
+              <div className="hero-content">
+                <div className="hero-subtitle mb-8 text-right">
+                  A{" "}
+                  <strong className="font-semibold text-accent2 dark:text-accent2-dark">
+                    {" "}
+                    <span style={{ color: "#ff9d00" }}>
+                      full stack developer
+                    </span>
+                  </strong>{" "}
+                  located in
+                  <i className="whitespace-nowrap font-light text-accent1 dark:text-accent1-dark">
+                    {" "}
+                    Lexington, KY
+                  </i>{" "}
+                  with a primary focus on frontend experiences with a growing
+                  skillset in backend engineering.
+                </div>
+                <div className="hero-actions">
+                  <a href="#projects" className="hero-button">
+                    <span>Explore My Projects</span>
+                    <i
+                      className="fas fa-arrow-down ml-2"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </section>
+        {/* About */}
+        <section id="about" className="mb-16 justify-center">
+          <Flex className="flex-col gap-3 items-center">
+            <h1 className="text-3xl font-semibold tracking-tight mb-2">
+              Brandon Spencer
+            </h1>
+            <Flex className="text-lg text-zinc-500">Software Engineer</Flex>
+            <p className="text-zinc-600 leading-relaxed mb-5">
+              Needs a good tag line
+            </p>
+            <ul className="flex flex-wrap gap-4 text-sm text-zinc-500">
+              <li>
+                <i className="fa-solid fa-envelope"></i>
+                <a
+                  href="mailto:brandon.spencer@gmail.com"
+                  className="hover:text-zinc-900 transition-colors"
+                >
+                  brandon.spencer@gmail.com
+                </a>
+              </li>
+              <li>
+                <i className="fa-solid fa-phone"></i>
+                <a
+                  href="tel:+18597976417"
+                  className="hover:text-zinc-900 transition-colors"
+                >
+                  859.797.6417
+                </a>
+              </li>
+              <li>
+                <i className="fa-brands fa-github"></i>
+                <a
+                  href="https://github.com/doubldragon"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-zinc-900 transition-colors"
+                >
+                  GitHub
+                </a>
+              </li>
+              <li>
+                <i className="fa-brands fa-linkedin"></i>
+                <a
+                  href="https://linkedin.com/in/brandonrspencer"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-zinc-900 transition-colors"
+                >
+                  LinkedIn
+                </a>
+              </li>
+            </ul>
+          </Flex>
+        </section>
 
+        {/* Projects */}
+        <section id="projects" className="w-full max-w-[90vw] mb-16">
+          <h2 className="text-sm font-semibold uppercase tracking-widest text-theme-subtle mb-6">
+            Projects
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {projects.map((project) => (
+              <ProjectCard key={project.title} project={project} />
+            ))}
+          </div>
+        </section>
+
+        {/* Work Experience */}
+        <section id="experience" className="w-full max-w-[90vw] mb-16">
+          <h2 className="text-sm font-semibold uppercase tracking-widest text-theme-subtle mb-6">
+            Work Experience
+          </h2>
+          <div className="space-y-10">
+            {experience.map((entry) => (
+              <ExperienceCard
+                key={`${entry.company}-${entry.start}`}
+                entry={entry}
+              />
+            ))}
+          </div>
+        </section>
       </main>
     </>
   );
