@@ -1,7 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Script from "next/script";
-import { Flex } from "@/styles/components";
 import Navbar from "@/components/Navbar";
 import ExperienceCard from "@/components/ExperienceCard";
 import experience from "@/data/experience";
@@ -63,11 +62,11 @@ const Home: NextPage = () => {
         </section>
         {/* About */}
         <section id="about" className="mb-16 justify-center">
-          <Flex className="flex-col gap-3 items-center">
+          <div className="flex flex-col gap-3 items-center">
             <h1 className="text-3xl font-semibold tracking-tight mb-2">
               Brandon Spencer
             </h1>
-            <Flex className="text-lg text-zinc-500">Software Engineer</Flex>
+            <div className="flex text-lg text-zinc-500">Software Engineer</div>
             <p className="text-zinc-600 leading-relaxed mb-5">
               Needs a good tag line
             </p>
@@ -113,7 +112,7 @@ const Home: NextPage = () => {
                 </a>
               </li>
             </ul>
-          </Flex>
+          </div>
         </section>
 
         {/* Projects */}
