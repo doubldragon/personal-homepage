@@ -25,7 +25,9 @@ const ProjectCard = ({ project }: { project: Project }) => (
         <span className="text-xs text-theme-subtle">{project.year}</span>
       </div>
 
-      <p className="text-xs text-theme-muted">{project.category.toUpperCase()}</p>
+      <p className="text-xs text-theme-muted">
+        {project.category.toUpperCase()}
+      </p>
 
       <p className="text-sm text-theme-muted">{project.blurb}</p>
       <hr />
@@ -34,7 +36,7 @@ const ProjectCard = ({ project }: { project: Project }) => (
           <Pill key={s}>{s.toUpperCase()}</Pill>
         ))}
       </div>
-      { project.link &&
+      {project.link && (
         <a
           href={project.link}
           target="_blank"
@@ -43,7 +45,7 @@ const ProjectCard = ({ project }: { project: Project }) => (
         >
           View project →
         </a>
-      }
+      )}
     </div>
   </div>
 );

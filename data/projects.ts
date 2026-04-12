@@ -12,12 +12,13 @@ const projects: Project[] = [
   {
     filename: null,
     title: "Alarm Dashboard",
-    blurb: "Frontend Alarm dashboard ingesting large datasets and optimizing performance",
+    blurb:
+      "Frontend Alarm dashboard ingesting large datasets and optimizing performance",
     category: "Apax Software",
     skills: ["react", "Storybook", "Redux", "Redux-Sagas"],
     year: 2019,
     link: "",
-  }
+  },
 ];
 
 export default projects;
