@@ -26,7 +26,7 @@ const Home: NextPage = () => {
       <main className="w-full flex justify-center items-center flex-col text-theme-text">
         <section id="hero" className="w-full">
           <div className="hero-wrapper flex justify-center">
-            <div className="hero-layout w-full max-w-[90vw] h-screen flex justify-center items-center -mt-8 relative">
+            <div className="hero-layout w-full max-w-[90vw] h-screen -mt-8">
               <div className="hero-title-section">
                 <h1 className="hero-title">Hi, I'm Brandon</h1>
               </div>
@@ -116,7 +116,10 @@ const Home: NextPage = () => {
         </section>
 
         {/* Projects */}
-        <section id="projects" className="w-full max-w-[90vw] mb-16">
+        <section
+          id="projects"
+          className="w-full px-4 md:max-w-[90vw] md:px-0 mb-16"
+        >
           <h2 className="text-sm font-semibold uppercase tracking-widest text-theme-subtle mb-6">
             Projects
           </h2>
@@ -128,7 +131,10 @@ const Home: NextPage = () => {
         </section>
 
         {/* Work Experience */}
-        <section id="experience" className="w-full max-w-[90vw] mb-16">
+        <section
+          id="experience"
+          className="w-full px-4 md:max-w-[90vw] md:px-0 mb-16"
+        >
           <h2 className="text-sm font-semibold uppercase tracking-widest text-theme-subtle mb-6">
             Work Experience
           </h2>
