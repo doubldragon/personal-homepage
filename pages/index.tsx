@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Script from "next/script";
 import Navbar from "@/components/Navbar";
+import Bio from "@/components/Bio";
 import ExperienceCard from "@/components/ExperienceCard";
 import experience from "@/data/experience";
 import ProjectCard from "@/components/ProjectCard";
@@ -61,58 +62,11 @@ const Home: NextPage = () => {
           </div>
         </section>
         {/* About */}
-        <section id="about" className="mb-16 justify-center">
-          <div className="flex flex-col gap-3 items-center">
-            <h1 className="text-3xl font-semibold tracking-tight mb-2">
-              Brandon Spencer
-            </h1>
-            <div className="flex text-lg text-zinc-500">Software Engineer</div>
-            <p className="text-zinc-600 leading-relaxed mb-5">
-              Needs a good tag line
-            </p>
-            <ul className="flex flex-wrap gap-4 text-sm text-zinc-500">
-              <li>
-                <i className="fa-solid fa-envelope"></i>
-                <a
-                  href="mailto:brandon.spencer@gmail.com"
-                  className="hover:text-zinc-900 transition-colors"
-                >
-                  brandon.spencer@gmail.com
-                </a>
-              </li>
-              <li>
-                <i className="fa-solid fa-phone"></i>
-                <a
-                  href="tel:+18597976417"
-                  className="hover:text-zinc-900 transition-colors"
-                >
-                  859.797.6417
-                </a>
-              </li>
-              <li>
-                <i className="fa-brands fa-github"></i>
-                <a
-                  href="https://github.com/doubldragon"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-zinc-900 transition-colors"
-                >
-                  GitHub
-                </a>
-              </li>
-              <li>
-                <i className="fa-brands fa-linkedin"></i>
-                <a
-                  href="https://linkedin.com/in/brandonrspencer"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-zinc-900 transition-colors"
-                >
-                  LinkedIn
-                </a>
-              </li>
-            </ul>
-          </div>
+        <section
+          id="about"
+          className="w-full px-4 md:max-w-[90vw] md:px-0 mb-16"
+        >
+          <Bio />
         </section>
 
         {/* Projects */}
